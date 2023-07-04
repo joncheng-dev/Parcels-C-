@@ -11,8 +11,30 @@ namespace Parcels.Tests
     [TestMethod]
     public void PackageConstructor_CreatesInstanceOfPackage_Package()
     {
-      Package newPackage = new Package();
+      double someNumber = 1;
+      Package newPackage = new Package(someNumber);
       Assert.AreEqual(typeof(Package), newPackage.GetType());
+    }
+
+    [TestMethod]
+    public void GetWeight_ReturnsWeight_Double()
+    {
+      double aNumber = 1;
+      Package newPackage = new Package(aNumber);
+      Assert.AreEqual(aNumber, newPackage.Weight);
+    }
+
+    [TestMethod]
+    public void SetWeight_SetsValueOfWeight_Double()
+    {
+      //Arrange
+      double aNumber = 1;
+      Package newPackage = new Package(aNumber);
+      //Act
+      double anotherNumber = 2;
+      newPackage.Weight = anotherNumber;
+      //Assert
+      Assert.AreEqual(anotherNumber, newPackage.Weight);
     }
   }
 }
