@@ -8,12 +8,14 @@ namespace Parcels.Models
     // Dimensions
     public double itemLength { get; set; }
     public double itemWidth { get; set; }
+    public double itemHeight { get; set; }
 
-    public Package(double weight, double length, double width)
+    public Package(double weight, double length, double width, double height)
     {
       itemWeight = weight;
       itemLength = length;
       itemWidth = width;
+      itemHeight = height;
     }
   }
 }

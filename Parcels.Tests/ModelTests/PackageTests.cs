@@ -14,7 +14,8 @@ namespace Parcels.Tests
       double aWeight = 1;
       double aLength = 2;
       double aWidth = 3;
-      Package newPackage = new Package(aWeight, aLength, aWidth);
+      double aHeight = 4;
+      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
       Assert.AreEqual(typeof(Package), newPackage.GetType());
     }
 
@@ -24,7 +25,8 @@ namespace Parcels.Tests
       double aWeight = 1;
       double aLength = 2;
       double aWidth = 3;
-      Package newPackage = new Package(aWeight, aLength, aWidth);
+      double aHeight = 4;
+      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
       Assert.AreEqual(aWeight, newPackage.itemWeight);
     }
 
@@ -35,7 +37,8 @@ namespace Parcels.Tests
       double aWeight = 1;
       double aLength = 2;
       double aWidth = 3;
-      Package newPackage = new Package(aWeight, aLength, aWidth);
+      double aHeight = 4;
+      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
       //Act
       double updatedWeight = 2;
       newPackage.itemWeight = updatedWeight;
@@ -49,7 +52,8 @@ namespace Parcels.Tests
       double aWeight = 1;
       double aLength = 2;
       double aWidth = 3;
-      Package newPackage = new Package(aWeight, aLength, aWidth);
+      double aHeight = 4;
+      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
       Assert.AreEqual(aLength, newPackage.itemLength);
     }
 
@@ -59,7 +63,8 @@ namespace Parcels.Tests
       double aWeight = 1;
       double aLength = 2;
       double aWidth = 3;
-      Package newPackage = new Package(aWeight, aLength, aWidth);
+      double aHeight = 4;
+      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
 
       double updatedLength = 4;
       newPackage.itemLength = updatedLength;
@@ -73,7 +78,8 @@ namespace Parcels.Tests
       double aWeight = 1;
       double aLength = 2;
       double aWidth = 3;
-      Package newPackage = new Package(aWeight, aLength, aWidth);
+      double aHeight = 4;
+      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
       Assert.AreEqual(aWidth, newPackage.itemWidth);
     }
 
@@ -83,12 +89,40 @@ namespace Parcels.Tests
       double aWeight = 1;
       double aLength = 2;
       double aWidth = 3;
-      Package newPackage = new Package(aWeight, aLength, aWidth);
+      double aHeight = 4;
+      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
 
       double updatedWidth = 40;
       newPackage.itemWidth = updatedWidth;
 
       Assert.AreEqual(updatedWidth, newPackage.itemWidth);
+    }
+
+    [TestMethod]
+    public void GetHeight_ReturnsHeight_Double()
+    {
+      double aWeight = 1;
+      double aLength = 2;
+      double aWidth = 3;
+      double aHeight = 4;
+      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
+
+      Assert.AreEqual(aHeight, newPackage.itemHeight);
+    }
+
+    [TestMethod]
+    public void SetHeight_SetsValueOfHeight_Double()
+    {
+      double aWeight = 1;
+      double aLength = 2;
+      double aWidth = 3;
+      double aHeight = 4;
+      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
+
+      double updatedHeight = 40;
+      newPackage.itemHeight = updatedHeight;
+
+      Assert.AreEqual(updatedHeight, newPackage.itemHeight);
     }
   }
 }
