@@ -6,17 +6,17 @@ using System;
 namespace Parcels.Tests
 {
   [TestClass]
-  public class PackageTests
+  public class ItemTests
   {
     [TestMethod]
-    public void PackageConstructor_CreatesInstanceOfPackage_Package()
+    public void ItemConstructor_CreatesInstanceOfItem_Item()
     {
       double aWeight = 1;
       double aLength = 2;
       double aWidth = 3;
       double aHeight = 4;
-      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
-      Assert.AreEqual(typeof(Package), newPackage.GetType());
+      Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
+      Assert.AreEqual(typeof(Item), newItem.GetType());
     }
 
     [TestMethod]
@@ -26,8 +26,8 @@ namespace Parcels.Tests
       double aLength = 2;
       double aWidth = 3;
       double aHeight = 4;
-      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
-      Assert.AreEqual(aWeight, newPackage.itemWeight);
+      Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
+      Assert.AreEqual(aWeight, newItem.itemWeight);
     }
 
     [TestMethod]
@@ -38,12 +38,12 @@ namespace Parcels.Tests
       double aLength = 2;
       double aWidth = 3;
       double aHeight = 4;
-      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
+      Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
       //Act
       double updatedWeight = 2;
-      newPackage.itemWeight = updatedWeight;
+      newItem.itemWeight = updatedWeight;
       //Assert
-      Assert.AreEqual(updatedWeight, newPackage.itemWeight);
+      Assert.AreEqual(updatedWeight, newItem.itemWeight);
     }
 
     [TestMethod]
@@ -53,8 +53,8 @@ namespace Parcels.Tests
       double aLength = 2;
       double aWidth = 3;
       double aHeight = 4;
-      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
-      Assert.AreEqual(aLength, newPackage.itemLength);
+      Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
+      Assert.AreEqual(aLength, newItem.itemLength);
     }
 
     [TestMethod]
@@ -64,12 +64,12 @@ namespace Parcels.Tests
       double aLength = 2;
       double aWidth = 3;
       double aHeight = 4;
-      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
+      Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
 
       double updatedLength = 4;
-      newPackage.itemLength = updatedLength;
+      newItem.itemLength = updatedLength;
 
-      Assert.AreEqual(updatedLength, newPackage.itemLength);
+      Assert.AreEqual(updatedLength, newItem.itemLength);
     }
 
     [TestMethod]
@@ -79,8 +79,8 @@ namespace Parcels.Tests
       double aLength = 2;
       double aWidth = 3;
       double aHeight = 4;
-      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
-      Assert.AreEqual(aWidth, newPackage.itemWidth);
+      Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
+      Assert.AreEqual(aWidth, newItem.itemWidth);
     }
 
     [TestMethod]
@@ -90,12 +90,12 @@ namespace Parcels.Tests
       double aLength = 2;
       double aWidth = 3;
       double aHeight = 4;
-      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
+      Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
 
       double updatedWidth = 40;
-      newPackage.itemWidth = updatedWidth;
+      newItem.itemWidth = updatedWidth;
 
-      Assert.AreEqual(updatedWidth, newPackage.itemWidth);
+      Assert.AreEqual(updatedWidth, newItem.itemWidth);
     }
 
     [TestMethod]
@@ -105,9 +105,9 @@ namespace Parcels.Tests
       double aLength = 2;
       double aWidth = 3;
       double aHeight = 4;
-      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
+      Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
 
-      Assert.AreEqual(aHeight, newPackage.itemHeight);
+      Assert.AreEqual(aHeight, newItem.itemHeight);
     }
 
     [TestMethod]
@@ -117,12 +117,12 @@ namespace Parcels.Tests
       double aLength = 2;
       double aWidth = 3;
       double aHeight = 4;
-      Package newPackage = new Package(aWeight, aLength, aWidth, aHeight);
+      Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
 
       double updatedHeight = 40;
-      newPackage.itemHeight = updatedHeight;
+      newItem.itemHeight = updatedHeight;
 
-      Assert.AreEqual(updatedHeight, newPackage.itemHeight);
+      Assert.AreEqual(updatedHeight, newItem.itemHeight);
     }
   }
 }

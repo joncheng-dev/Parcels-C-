@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Parcels.Models
 {
-  public class Package
+  public class Item
   {
     public double itemWeight { get; set; }
     // Dimensions
@@ -10,7 +10,7 @@ namespace Parcels.Models
     public double itemWidth { get; set; }
     public double itemHeight { get; set; }
 
-    public Package(double weight, double length, double width, double height)
+    public Item(double weight, double length, double width, double height)
     {
       itemWeight = weight;
       itemLength = length;
