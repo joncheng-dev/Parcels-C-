@@ -11,30 +11,55 @@ namespace Parcels.Tests
     [TestMethod]
     public void PackageConstructor_CreatesInstanceOfPackage_Package()
     {
-      double someNumber = 1;
-      Package newPackage = new Package(someNumber);
+      double aWeight = 1;
+      double aLength = 2;
+      Package newPackage = new Package(aWeight, aLength);
       Assert.AreEqual(typeof(Package), newPackage.GetType());
     }
 
     [TestMethod]
     public void GetWeight_ReturnsWeight_Double()
     {
-      double aNumber = 1;
-      Package newPackage = new Package(aNumber);
-      Assert.AreEqual(aNumber, newPackage.Weight);
+      double aWeight = 1;
+      double aLength = 2;
+      Package newPackage = new Package(aWeight, aLength);
+      Assert.AreEqual(aWeight, newPackage.itemWeight);
     }
 
     [TestMethod]
     public void SetWeight_SetsValueOfWeight_Double()
     {
       //Arrange
-      double aNumber = 1;
-      Package newPackage = new Package(aNumber);
+      double aWeight = 1;
+      double aLength = 2;
+      Package newPackage = new Package(aWeight, aLength);
       //Act
-      double anotherNumber = 2;
-      newPackage.Weight = anotherNumber;
+      double updatedWeight = 2;
+      newPackage.itemWeight = updatedWeight;
       //Assert
-      Assert.AreEqual(anotherNumber, newPackage.Weight);
+      Assert.AreEqual(updatedWeight, newPackage.itemWeight);
+    }
+
+    [TestMethod]
+    public void GetLength_ReturnsLength_Double()
+    {
+      double aWeight = 1;
+      double aLength = 2;
+      Package newPackage = new Package(aWeight, aLength);
+      Assert.AreEqual(aLength, newPackage.itemLength);
+    }
+
+    [TestMethod]
+    public void SetLength_SetsValueOfLength_Double()
+    {
+      double aWeight = 1;
+      double aLength = 2;
+      Package newPackage = new Package(aWeight, aLength);
+
+      double updatedLength = 4;
+      newPackage.itemLength = updatedLength;
+
+      Assert.AreEqual(updatedLength, newPackage.itemLength);
     }
   }
 }

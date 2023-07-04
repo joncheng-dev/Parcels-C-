@@ -4,11 +4,15 @@ namespace Parcels.Models
 {
   public class Package
   {
-    public double Weight { get; set; }
+    public double itemWeight { get; set; }
+    // Dimensions
+    public double itemLength { get; set; }
 
-    public Package(double packageWeight)
+    public Package(double weight, double length)
     {
-      Weight = packageWeight;
+      itemWeight = weight;
+      itemLength = length;
+
     }
   }
 }
