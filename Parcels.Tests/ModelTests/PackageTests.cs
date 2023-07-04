@@ -13,7 +13,8 @@ namespace Parcels.Tests
     {
       double aWeight = 1;
       double aLength = 2;
-      Package newPackage = new Package(aWeight, aLength);
+      double aWidth = 3;
+      Package newPackage = new Package(aWeight, aLength, aWidth);
       Assert.AreEqual(typeof(Package), newPackage.GetType());
     }
 
@@ -22,7 +23,8 @@ namespace Parcels.Tests
     {
       double aWeight = 1;
       double aLength = 2;
-      Package newPackage = new Package(aWeight, aLength);
+      double aWidth = 3;
+      Package newPackage = new Package(aWeight, aLength, aWidth);
       Assert.AreEqual(aWeight, newPackage.itemWeight);
     }
 
@@ -32,7 +34,8 @@ namespace Parcels.Tests
       //Arrange
       double aWeight = 1;
       double aLength = 2;
-      Package newPackage = new Package(aWeight, aLength);
+      double aWidth = 3;
+      Package newPackage = new Package(aWeight, aLength, aWidth);
       //Act
       double updatedWeight = 2;
       newPackage.itemWeight = updatedWeight;
@@ -45,7 +48,8 @@ namespace Parcels.Tests
     {
       double aWeight = 1;
       double aLength = 2;
-      Package newPackage = new Package(aWeight, aLength);
+      double aWidth = 3;
+      Package newPackage = new Package(aWeight, aLength, aWidth);
       Assert.AreEqual(aLength, newPackage.itemLength);
     }
 
@@ -54,12 +58,37 @@ namespace Parcels.Tests
     {
       double aWeight = 1;
       double aLength = 2;
-      Package newPackage = new Package(aWeight, aLength);
+      double aWidth = 3;
+      Package newPackage = new Package(aWeight, aLength, aWidth);
 
       double updatedLength = 4;
       newPackage.itemLength = updatedLength;
 
       Assert.AreEqual(updatedLength, newPackage.itemLength);
+    }
+
+    [TestMethod]
+    public void GetWidth_ReturnsWidth_Double()
+    {
+      double aWeight = 1;
+      double aLength = 2;
+      double aWidth = 3;
+      Package newPackage = new Package(aWeight, aLength, aWidth);
+      Assert.AreEqual(aWidth, newPackage.itemWidth);
+    }
+
+    [TestMethod]
+    public void SetWidth_SetsValueOfWidth_Double()
+    {
+      double aWeight = 1;
+      double aLength = 2;
+      double aWidth = 3;
+      Package newPackage = new Package(aWeight, aLength, aWidth);
+
+      double updatedWidth = 40;
+      newPackage.itemWidth = updatedWidth;
+
+      Assert.AreEqual(updatedWidth, newPackage.itemWidth);
     }
   }
 }
