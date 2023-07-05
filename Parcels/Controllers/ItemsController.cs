@@ -9,6 +9,7 @@ namespace Parcels.Controllers
     // [HttpGet("/inventory")]
     // public ActionResult Index()
     // {
+      
     //   List<Entry> allEntries = Entry.GetAll();
     //   return View(allEntries);
     // }

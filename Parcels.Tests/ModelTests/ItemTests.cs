@@ -6,8 +6,13 @@ using System;
 namespace Parcels.Tests
 {
   [TestClass]
-  public class ItemTests
+  public class ItemTests : IDisposable
   {
+    public void Dispose()
+    {
+      Item.ClearAll();
+    }
+
     [TestMethod]
     public void ItemConstructor_CreatesInstanceOfItem_Item()
     {
@@ -124,5 +129,23 @@ namespace Parcels.Tests
 
       Assert.AreEqual(updatedHeight, newItem.itemHeight);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_ItemList()
+    {
+      List<Item> packagesList = new List<Item> { };
+      List<Item> result = Item.GetAll();
+      CollectionAssert.AreEqual(packagesList, result);
+    }
+
+    // [TestMethod]
+    // public void GetAll_ReturnsItemList_ItemList()
+    // {
+    //   double aWeight = 1;
+    //   double aLength = 2;
+    //   double aWidth = 3;
+    //   double aHeight = 4;
+    //   Item newItem = new Item(aWeight, aLength, aWidth, aHeight);      
+    // }
   }
 }
