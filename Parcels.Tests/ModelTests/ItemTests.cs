@@ -138,14 +138,24 @@ namespace Parcels.Tests
       CollectionAssert.AreEqual(packagesList, result);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsItemList_ItemList()
-    // {
-    //   double aWeight = 1;
-    //   double aLength = 2;
-    //   double aWidth = 3;
-    //   double aHeight = 4;
-    //   Item newItem = new Item(aWeight, aLength, aWidth, aHeight);      
-    // }
+    [TestMethod]
+    public void GetAll_ReturnsItemList_ItemList()
+    {
+      double aWeight1 = 1;
+      double aLength1 = 2;
+      double aWidth1 = 3;
+      double aHeight1 = 4;
+      Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1);      
+      double aWeight2 = 11;
+      double aLength2 = 22;
+      double aWidth2 = 33;
+      double aHeight2 = 44;
+      Item newItem2 = new Item(aWeight2, aLength2, aWidth2, aHeight2);
+
+      List<Item> shippingItemList = new List<Item> { newItem1, newItem2 };
+      List<Item> result = Item.GetAll();
+      
+      CollectionAssert.AreEqual(shippingItemList, result);
+    }
   }
 }
