@@ -208,10 +208,40 @@ namespace Parcels.Tests
       double aHeight1 = 4;
       Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1);
 
-      double expectedCost = 10;
+      double expectedCost = 12;
       newItem1.CalculateVolume();
-      double actualCost = Item.CalculateCost(newItem1.itemWeight, newItem1.itemVolume);
+      double actualCost = Item.CalculateCost(newItem1.itemWeight,newItem1.itemVolume);
       Assert.AreEqual(expectedCost, actualCost);
     }
+
+    [TestMethod]
+    public void GetItemCostToShip_ReturnsItemCost_Double()
+    {
+      double aWeight1 = 1;
+      double aLength1 = 2;
+      double aWidth1 = 3;
+      double aHeight1 = 4;
+      double aVolume = 24;
+      double aCost = 12;
+      Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1, aVolume, aCost);
+
+      Assert.AreEqual(aCost, newItem1.itemCost);
+    }
+
+    [TestMethod]
+    public void SetItemCostToShip_SetsItemCost_Void()
+    {
+      double aWeight1 = 1;
+      double aLength1 = 2;
+      double aWidth1 = 3;
+      double aHeight1 = 4;
+      double aVolume = 24;
+      double aCost = 12;
+      Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1, aVolume, aCost);
+
+      double setCost = 123;
+      newItem1.itemCost = setCost;
+      Assert.AreEqual(setCost, newItem1.itemCost);
+    }        
   }
 }

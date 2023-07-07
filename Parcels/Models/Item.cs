@@ -11,6 +11,8 @@ namespace Parcels.Models
     public double itemHeight { get; set; }
     // Volume
     public double itemVolume { get; set; }
+    // Cost to Ship
+    public double itemCost { get; set; }
 
     private static List<Item> _instances = new List<Item> { };
 
@@ -33,6 +35,17 @@ namespace Parcels.Models
       _instances.Add(this);
     }
 
+    public Item(double weight, double length, double width, double height, double volume, double cost)
+    {
+      itemWeight = weight;
+      itemLength = length;
+      itemWidth = width;
+      itemHeight = height;
+      itemVolume = volume;
+      itemCost = cost;
+      _instances.Add(this);
+    }
+
     public static List<Item> GetAll()
     {
       return _instances;
@@ -50,7 +63,7 @@ namespace Parcels.Models
 
     public static double CalculateCost(double weight, double volume)
     {
-      return 10;
+      return volume * 0.5 * weight;
     }
   }
 }
