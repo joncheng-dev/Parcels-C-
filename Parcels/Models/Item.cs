@@ -42,5 +42,11 @@ namespace Parcels.Models
     {
       _instances.Clear();
     }
+
+    public void CalculateVolume()
+    {
+      itemVolume = itemLength * itemWidth * itemHeight;
+    }
+
   }
 }
