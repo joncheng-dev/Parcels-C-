@@ -6,13 +6,13 @@ namespace Parcels.Controllers
 {
   public class ParcelsController : Controller
   {
-    // [HttpGet("/inventory")]
-    // public ActionResult Index()
-    // {
+    [HttpGet("/cart")]
+    public ActionResult Index()
+    {
       
-    //   List<Entry> allEntries = Entry.GetAll();
-    //   return View(allEntries);
-    // }
+      List<Item> allPackages = Item.GetAll();
+      return View(allPackages);
+    }
 
     [HttpGet("/cart/additem")]
     public ActionResult CreateForm()
