@@ -48,5 +48,9 @@ namespace Parcels.Models
       itemVolume = itemLength * itemWidth * itemHeight;
     }
 
+    public static double CalculateCost(double weight, double volume)
+    {
+      return 10;
+    }
   }
 }

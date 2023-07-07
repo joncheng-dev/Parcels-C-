@@ -197,7 +197,21 @@ namespace Parcels.Tests
       double expectedVolumeResult = 24;
       newItem1.CalculateVolume();
       Assert.AreEqual(expectedVolumeResult, newItem1.itemVolume);
+    }
 
+    [TestMethod]
+    public void CalculateCost_ReturnsItemCostToShip_Double()
+    {
+      double aWeight1 = 1;
+      double aLength1 = 2;
+      double aWidth1 = 3;
+      double aHeight1 = 4;
+      Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1);
+
+      double expectedCost = 10;
+      newItem1.CalculateVolume();
+      double actualCost = Item.CalculateCost(newItem1.itemWeight, newItem1.itemVolume);
+      Assert.AreEqual(expectedCost, actualCost);
     }
   }
 }
