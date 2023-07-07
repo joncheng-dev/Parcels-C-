@@ -157,5 +157,46 @@ namespace Parcels.Tests
       
       CollectionAssert.AreEqual(shippingItemList, result);
     }
+
+    [TestMethod]
+    public void GetItemVolume_ReturnsItemVolume_Double()
+    {
+      double aWeight1 = 1;
+      double aLength1 = 2;
+      double aWidth1 = 3;
+      double aHeight1 = 4;
+      double aVolume = 24;
+      Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1, aVolume);
+
+      Assert.AreEqual(aVolume, newItem1.itemVolume);
+    }
+
+    [TestMethod]
+    public void SetItemVolume_SetsItemVolumeValue_Void()
+    {
+      double aWeight1 = 1;
+      double aLength1 = 2;
+      double aWidth1 = 3;
+      double aHeight1 = 4;
+      Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1);
+
+      double setVolume = 24;
+      newItem1.itemVolume = setVolume;
+      Assert.AreEqual(setVolume, newItem1.itemVolume);
+    }
+
+    // [TestMethod]
+    // public void CalculateVolume_ReturnsItemVolume_Double()
+    // {
+    //   double aWeight1 = 1;
+    //   double aLength1 = 2;
+    //   double aWidth1 = 3;
+    //   double aHeight1 = 4;
+    //   Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1);
+
+    //   double volumeResult = 24;
+    //   Assert.AreEqual(volumeResult, newItem2.CalculateVolume);
+
+    // }
   }
 }

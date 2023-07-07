@@ -9,6 +9,8 @@ namespace Parcels.Models
     public double itemLength { get; set; }
     public double itemWidth { get; set; }
     public double itemHeight { get; set; }
+    // Volume
+    public double itemVolume { get; set; }
 
     private static List<Item> _instances = new List<Item> { };
 
@@ -18,6 +20,16 @@ namespace Parcels.Models
       itemLength = length;
       itemWidth = width;
       itemHeight = height;
+      _instances.Add(this);
+    }
+
+    public Item(double weight, double length, double width, double height, double volume)
+    {
+      itemWeight = weight;
+      itemLength = length;
+      itemWidth = width;
+      itemHeight = height;
+      itemVolume = volume;
       _instances.Add(this);
     }
 
