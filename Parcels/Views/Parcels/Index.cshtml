@@ -8,20 +8,55 @@
       rel="stylesheet" 
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
   </head>
   <body>
     @using Parcels.Models;
     <h1>Cart</h1>
     @if (Model.Count == 0)
     {
-      <p>There are no items in your shipping cart.</p>
+      <p>There are no Items in your shipping cart.</p>
     }
-    @foreach (Item item in Model)
+    @if (Model.Count != 0)
     {
-    <ul>
-      <li>@item.itemWeight, @item.itemLength, @item.itemWidth, @item.itemHeight</li>
-    </ul>
+    <table>
+      <tr>
+        <th>Weight</th>
+        <th>Length</th>
+        <th>Width</th>
+        <th>Height</th>
+        <th>Volume</th>
+        <th>Cost to Ship</th>
+      </tr>
+      @foreach (Item Item in Model)
+      {
+        <tr>
+          <td>@Item.ItemWeight</td>
+          <td>@Item.ItemLength</td>
+          <td>@Item.ItemWidth</td>
+          <td>@Item.ItemHeight</td>
+          <td>@Item.ItemVolume</td>
+          <td>@Item.ItemCost</td>
+        </tr>
+      }
+    </table>
     }
-    <a href="/cart/additem">Add a new item.</a>
+    <a href="/cart/addItem">Add a new Item.</a>
   </body>
 </html>

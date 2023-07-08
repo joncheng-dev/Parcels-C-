@@ -32,7 +32,7 @@ namespace Parcels.Tests
       double aWidth = 3;
       double aHeight = 4;
       Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
-      Assert.AreEqual(aWeight, newItem.itemWeight);
+      Assert.AreEqual(aWeight, newItem.ItemWeight);
     }
 
     [TestMethod]
@@ -46,9 +46,9 @@ namespace Parcels.Tests
       Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
       //Act
       double updatedWeight = 2;
-      newItem.itemWeight = updatedWeight;
+      newItem.ItemWeight = updatedWeight;
       //Assert
-      Assert.AreEqual(updatedWeight, newItem.itemWeight);
+      Assert.AreEqual(updatedWeight, newItem.ItemWeight);
     }
 
     [TestMethod]
@@ -59,7 +59,7 @@ namespace Parcels.Tests
       double aWidth = 3;
       double aHeight = 4;
       Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
-      Assert.AreEqual(aLength, newItem.itemLength);
+      Assert.AreEqual(aLength, newItem.ItemLength);
     }
 
     [TestMethod]
@@ -72,9 +72,9 @@ namespace Parcels.Tests
       Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
 
       double updatedLength = 4;
-      newItem.itemLength = updatedLength;
+      newItem.ItemLength = updatedLength;
 
-      Assert.AreEqual(updatedLength, newItem.itemLength);
+      Assert.AreEqual(updatedLength, newItem.ItemLength);
     }
 
     [TestMethod]
@@ -85,7 +85,7 @@ namespace Parcels.Tests
       double aWidth = 3;
       double aHeight = 4;
       Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
-      Assert.AreEqual(aWidth, newItem.itemWidth);
+      Assert.AreEqual(aWidth, newItem.ItemWidth);
     }
 
     [TestMethod]
@@ -98,9 +98,9 @@ namespace Parcels.Tests
       Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
 
       double updatedWidth = 40;
-      newItem.itemWidth = updatedWidth;
+      newItem.ItemWidth = updatedWidth;
 
-      Assert.AreEqual(updatedWidth, newItem.itemWidth);
+      Assert.AreEqual(updatedWidth, newItem.ItemWidth);
     }
 
     [TestMethod]
@@ -112,7 +112,7 @@ namespace Parcels.Tests
       double aHeight = 4;
       Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
 
-      Assert.AreEqual(aHeight, newItem.itemHeight);
+      Assert.AreEqual(aHeight, newItem.ItemHeight);
     }
 
     [TestMethod]
@@ -125,9 +125,9 @@ namespace Parcels.Tests
       Item newItem = new Item(aWeight, aLength, aWidth, aHeight);
 
       double updatedHeight = 40;
-      newItem.itemHeight = updatedHeight;
+      newItem.ItemHeight = updatedHeight;
 
-      Assert.AreEqual(updatedHeight, newItem.itemHeight);
+      Assert.AreEqual(updatedHeight, newItem.ItemHeight);
     }
 
     [TestMethod]
@@ -168,7 +168,7 @@ namespace Parcels.Tests
       double aVolume = 24;
       Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1, aVolume);
 
-      Assert.AreEqual(aVolume, newItem1.itemVolume);
+      Assert.AreEqual(aVolume, newItem1.ItemVolume);
     }
 
     [TestMethod]
@@ -181,8 +181,8 @@ namespace Parcels.Tests
       Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1);
 
       double setVolume = 24;
-      newItem1.itemVolume = setVolume;
-      Assert.AreEqual(setVolume, newItem1.itemVolume);
+      newItem1.ItemVolume = setVolume;
+      Assert.AreEqual(setVolume, newItem1.ItemVolume);
     }
 
     [TestMethod]
@@ -196,7 +196,7 @@ namespace Parcels.Tests
 
       double expectedVolumeResult = 24;
       newItem1.CalculateVolume();
-      Assert.AreEqual(expectedVolumeResult, newItem1.itemVolume);
+      Assert.AreEqual(expectedVolumeResult, newItem1.ItemVolume);
     }
 
     [TestMethod]
@@ -210,7 +210,7 @@ namespace Parcels.Tests
       double aCost = 12;
       Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1, aVolume, aCost);
 
-      Assert.AreEqual(aCost, newItem1.itemCost);
+      Assert.AreEqual(aCost, newItem1.ItemCost);
     }
 
     [TestMethod]
@@ -225,8 +225,8 @@ namespace Parcels.Tests
       Item newItem1 = new Item(aWeight1, aLength1, aWidth1, aHeight1, aVolume, aCost);
 
       double setCost = 123;
-      newItem1.itemCost = setCost;
-      Assert.AreEqual(setCost, newItem1.itemCost);
+      newItem1.ItemCost = setCost;
+      Assert.AreEqual(setCost, newItem1.ItemCost);
     }
 
     [TestMethod]
@@ -242,7 +242,7 @@ namespace Parcels.Tests
       double expectedCost = 12;
       newItem1.CalculateVolume();
       newItem1.CalculateCost();
-      Assert.AreEqual(expectedCost, newItem1.itemCost);
+      Assert.AreEqual(expectedCost, newItem1.ItemCost);
     }
 
   }

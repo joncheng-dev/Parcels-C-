@@ -4,45 +4,45 @@ namespace Parcels.Models
 {
   public class Item
   {
-    public double itemWeight { get; set; }
+    public double ItemWeight { get; set; }
     // Dimensions
-    public double itemLength { get; set; }
-    public double itemWidth { get; set; }
-    public double itemHeight { get; set; }
+    public double ItemLength { get; set; }
+    public double ItemWidth { get; set; }
+    public double ItemHeight { get; set; }
     // Volume
-    public double itemVolume { get; set; }
+    public double ItemVolume { get; set; }
     // Cost to Ship
-    public double itemCost { get; set; }
+    public double ItemCost { get; set; }
 
     private static List<Item> _instances = new List<Item> { };
 
     public Item(double weight, double length, double width, double height)
     {
-      itemWeight = weight;
-      itemLength = length;
-      itemWidth = width;
-      itemHeight = height;
+      ItemWeight = weight;
+      ItemLength = length;
+      ItemWidth = width;
+      ItemHeight = height;
       _instances.Add(this);
     }
 
     public Item(double weight, double length, double width, double height, double volume)
     {
-      itemWeight = weight;
-      itemLength = length;
-      itemWidth = width;
-      itemHeight = height;
-      itemVolume = volume;
+      ItemWeight = weight;
+      ItemLength = length;
+      ItemWidth = width;
+      ItemHeight = height;
+      ItemVolume = volume;
       _instances.Add(this);
     }
 
     public Item(double weight, double length, double width, double height, double volume, double cost)
     {
-      itemWeight = weight;
-      itemLength = length;
-      itemWidth = width;
-      itemHeight = height;
-      itemVolume = volume;
-      itemCost = cost;
+      ItemWeight = weight;
+      ItemLength = length;
+      ItemWidth = width;
+      ItemHeight = height;
+      ItemVolume = volume;
+      ItemCost = cost;
       _instances.Add(this);
     }
 
@@ -58,12 +58,12 @@ namespace Parcels.Models
 
     public void CalculateVolume()
     {
-      itemVolume = itemLength * itemWidth * itemHeight;
+      ItemVolume = ItemLength * ItemWidth * ItemHeight;
     }
 
     public void CalculateCost()
     {
-      itemCost = itemVolume * 0.5 * itemWeight;
+      ItemCost = ItemVolume * 0.5 * ItemWeight;
     }
   }
 }
