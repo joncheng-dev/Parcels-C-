@@ -24,8 +24,9 @@ namespace Parcels.Controllers
     public ActionResult Create(double weight, double length, double width, double height)
     {
       Item anItem = new Item(weight, length, width, height);
+      anItem.CalculateVolume();
+      anItem.CalculateCost();
       return RedirectToAction("Index");
     }
-
   }
 }
